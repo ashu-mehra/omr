@@ -107,6 +107,8 @@ MM_GCExtensionsBase::initialize(MM_EnvironmentBase* env)
 	 */
 	usablePhysicalMemory = omrsysinfo_get_addressable_physical_memory();
 
+	fprintf(stdout, "usablePhysicalMemory: %zu\n", usablePhysicalMemory);
+
 	computeDefaultMaxHeap(env);
 
 	maxSizeDefaultMemorySpace = memoryMax;

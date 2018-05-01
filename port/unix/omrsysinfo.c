@@ -1582,6 +1582,7 @@ omrsysinfo_get_addressable_physical_memory(struct OMRPortLibrary *portLibrary)
 		/* there is a limit on the memory we can use so take the minimum of this usable amount and the physical memory */
 		usableMemory = OMR_MIN(memoryLimit, usableMemory);
 	}
+	fprintf(stdout, "omrsysinfo_get_addressable_physical_memory> usableMemory: %lld\n", usableMemory);
 	return usableMemory;
 }
 
